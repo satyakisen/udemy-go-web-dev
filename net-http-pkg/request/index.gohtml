@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Request</title>
+    </head>
+    <body>
+        <form>
+            <input type="text" name="fname" id="fname">
+            <input type="submit" name="submit-btn" id="submit-btn" value="Submit">
+        </form>
+
+        {{if .}}
+        <div id="main">
+            {{range $key, $value := .}}
+            <p><strong>{{$key}}</strong></p>
+            <ul>{{range $value}}<li><em>{{.}}</em></li>{{end}}</ul>
+            {{end}}
+        </div>
+        {{end}}
+        
+    </body>
+</html>
